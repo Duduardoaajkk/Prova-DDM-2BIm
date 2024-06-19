@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Image, StyleSheet } from 'react-native';
-import * as Font from 'expo-font'; // Importação do expo-font
+import { Image, StyleSheet, View, Text } from 'react-native';
+import * as Font from 'expo-font';
 import { HelloWave } from "@/components/HelloWave";
 import ParallaxScrollView from "@/components/ParallaxScrollView";
 import { ThemedText } from "@/components/ThemedText";
@@ -33,45 +33,36 @@ export default function HomeScreen() {
         />
       }
     >
-      <ThemedView style={styles.tituloContainer}>
-        <ThemedText type="title" style={styles.titleText}>Bem vindo ao UniChat!</ThemedText>
+      <ThemedView style={styles.container}>
+        <Text style={styles.titleText}>Bem vindo ao UniChat!</Text>
         <HelloWave />
       </ThemedView>
-      <ThemedView style={styles.tituloContainer}>
-        <ThemedText type="subtitle">Sobre o app:</ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.textoContainer}>
-        <ThemedText style={styles.defaultText}>
-          <ThemedText type="defaultSemiBold">
+      <ThemedView style={styles.container}>
+        <Text style={styles.subtitleText}>Sobre o app:</Text>
+        <Text style={styles.defaultText}>
+          <Text style={styles.defaultSemiBold}>
             UniChat é a solução definitiva para gerenciar todas as suas redes
             sociais em um único lugar. Com UniChat, você pode conectar e
             sincronizar suas contas de diversas plataformas, como Facebook,
             Twitter, Instagram, LinkedIn e muitas outras, facilitando a
             visualização e a interação com suas redes de forma centralizada.
-          </ThemedText>
-        </ThemedText>
+          </Text>
+        </Text>
       </ThemedView>
-      <ThemedView style={styles.tituloContainer}>
-        <ThemedText type="subtitle">Sobre mim:</ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.textoContainer}>
-        <ThemedText style={styles.defaultText}>
-          Me chamo Douglas Eduardo e estou fazendo um aplicativo que contém
-          algumas redes sociais.
-        </ThemedText>
+      <ThemedView style={styles.container}>
+        <Text style={styles.subtitleText}>Sobre mim:</Text>
+        <Text style={styles.defaultText}>
+          Me chamo Douglas Eduardo e estou desenvolvendo um aplicativo que integra várias redes sociais.
+        </Text>
       </ThemedView>
     </ParallaxScrollView>
   );
 }
 
 const styles = StyleSheet.create({
-  tituloContainer: {
-    flexDirection: "row",
-    alignItems: "center",
-    marginBottom: 8,
-  },
-  textoContainer: {
-    marginBottom: 16,
+  container: {
+    paddingHorizontal: 20,
+    paddingVertical: 15,
   },
   reactLogo: {
     height: 300,
@@ -84,10 +75,24 @@ const styles = StyleSheet.create({
     fontSize: 28,
     color: "#FFFFFF",
     fontFamily: "Monolite", // Aplicação da fonte Monolite
+    textAlign: "center",
+    marginBottom: 15,
+  },
+  subtitleText: {
+    fontSize: 24,
+    color: "#FFFFFF",
+    fontFamily: "Monolite", // Aplicação da fonte Monolite
+    marginBottom: 10,
+    textAlign: "center",
   },
   defaultText: {
-    fontSize: 16,
-    color: "#000000",
+    fontSize: 20,
+    color: "#FFFFFF",
     fontFamily: "Monolite", // Aplicação da fonte Monolite
+    lineHeight: 24,
+    textAlign: "center",
+  },
+  defaultSemiBold: {
+    fontWeight: "600",
   },
 });

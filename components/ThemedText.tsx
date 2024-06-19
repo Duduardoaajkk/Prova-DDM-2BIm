@@ -48,10 +48,12 @@ const styles = StyleSheet.create({
     fontSize: 32,
     fontWeight: 'bold',
     lineHeight: 32,
+    fontFamily:"Monolite",
   },
   subtitle: {
     fontSize: 20,
     fontWeight: 'bold',
+    fontFamily:"Monolite",
   },
   link: {
     lineHeight: 30,

@@ -1,6 +1,13 @@
-import * as Font from 'expo-font';
-import React, { useState, useEffect } from 'react';
-import { View, StyleSheet, Image, Pressable, ActivityIndicator, Linking } from 'react-native'; // Importações atualizadas
+import * as Font from "expo-font";
+import React, { useState, useEffect } from "react";
+import {
+  View,
+  StyleSheet,
+  Image,
+  Pressable,
+  ActivityIndicator,
+  Linking,
+} from "react-native"; // Importações atualizadas
 import ParallaxScrollView from "@/components/ParallaxScrollView";
 import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
@@ -36,8 +43,8 @@ export default function TabTwoScreen() {
         />
       }
     >
-      <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title" style={styles.title}>Redes sociais</ThemedText>
+      <ThemedView style={styles.container}>
+        <ThemedText style={styles.titleText}>Redes sociais</ThemedText>
       </ThemedView>
 
       <ThemedView style={styles.contentContainer}>
@@ -47,7 +54,7 @@ export default function TabTwoScreen() {
             style={styles.icon}
           />
           <Pressable
-            onPress={() => Linking.openURL("https://wa.me/qr/5518998106469")}
+            onPress={() => Linking.openURL("https://wa.me/5518998106469")}
           >
             <ThemedText style={styles.text}>Whatsapp</ThemedText>
           </Pressable>
@@ -158,6 +165,47 @@ export default function TabTwoScreen() {
             <ThemedText style={styles.text}>Discord</ThemedText>
           </Pressable>
         </ThemedView>
+        <ThemedView style={styles.redes}>
+          <Image
+            source={require("@/assets/images/10.png")}
+            style={styles.icon}
+          />
+          <Pressable
+            onPress={() =>
+              Linking.openURL(
+                "https://open.spotify.com/user/c9ejs5mc6skc0lpna2y9yepo3?si=0dWFKvG_Q32wGgnHYYhsOw%0A"
+              )
+            }
+          >
+            <ThemedText style={styles.text}>Spotify</ThemedText>
+          </Pressable>
+        </ThemedView>
+        <ThemedView style={styles.redes}>
+          <Image
+            source={require("@/assets/images/11.png")}
+            style={styles.icon}
+          />
+          <Pressable
+            onPress={() =>
+              Linking.openURL("https://www.reddit.com/user/Duduardoaajkk/")
+            }
+          >
+            <ThemedText style={styles.text}>Reddit</ThemedText>
+          </Pressable>
+        </ThemedView>
+        <ThemedView style={styles.redes}>
+          <Image
+            source={require("@/assets/images/11.png")}
+            style={styles.icon}
+          />
+          <Pressable
+            onPress={() =>
+              Linking.openURL("https://www.tiktok.com/@duduardoaajkk")
+            }
+          >
+            <ThemedText style={styles.text}>Tik Tok</ThemedText>
+          </Pressable>
+        </ThemedView>
       </ThemedView>
     </ParallaxScrollView>
   );
@@ -166,18 +214,19 @@ export default function TabTwoScreen() {
 const styles = StyleSheet.create({
   headerImage: {
     width: "100%",
-    height: 200, // Adjusted height for header image
+    height: "100%",
   },
-  titleContainer: {
-    paddingTop: 24, // Adjusted padding top for title container
-    paddingBottom: 16, // Adjusted padding bottom for title container
-    backgroundColor: "#353636", // Added background color for title container
+  container: {
+    paddingHorizontal: 20,
+    paddingVertical: 13,
   },
-  title: {
-    fontSize: 24, // Adjusted font size for title
-    color: "#FFFFFF", // Changed text color to white
+  titleText: {
+    fontSize: 28,
+    color: "#FFFFFF",
+    fontFamily: "Monolite", // Aplicação da fonte Monolite
     textAlign: "center",
-    fontFamily: "Monolite", // Ensure this line is included for the title font
+    marginBottom: 15,
+    paddingVertical: 5,
   },
   contentContainer: {
     alignItems: "center",
@@ -187,27 +236,27 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
-    marginTop: 12, // Decreased marginTop for smaller spacing
-    backgroundColor: "#FFFFFF", // Changed background color to white
+    marginTop: 12,
+    backgroundColor: "#FFFFFF",
     borderRadius: 100,
-    paddingVertical: 14, // Adjusted vertical padding for smaller buttons
-    paddingHorizontal: 24, // Adjusted horizontal padding for smaller buttons
-    marginBottom: 12, // Added marginBottom for better spacing between buttons
+    paddingVertical: 14,
+    paddingHorizontal: 24,
+    marginBottom: 12,
   },
   icon: {
-    width: 40, // Decreased icon size
-    height: 40, // Decreased icon size
-    marginRight: 12, // Decreased margin right for smaller spacing
+    width: 40,
+    height: 40,
+    marginRight: 12,
   },
   text: {
-    fontSize: 16, // Decreased font size for button text
-    color: "#353636", // Changed text color to dark gray
+    fontSize: 16,
+    color: "#353636",
     textAlign: "center",
-    fontFamily: "Monolite", // Ensure this line is included for the button text font
+    fontFamily: "Monolite",
   },
   loadingContainer: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
   },
 });
