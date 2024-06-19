@@ -41,7 +41,7 @@ export default function HomeScreen() {
         <Text style={styles.subtitleText}>Sobre o app:</Text>
         <Text style={styles.defaultText}>
           <Text style={styles.defaultSemiBold}>
-            UniChat é a solução definitiva para gerenciar todas as suas redes
+            UniChat é a soluçâo definitiva para gerenciar todas as suas redes
             sociais em um único lugar. Com UniChat, você pode conectar e
             sincronizar suas contas de diversas plataformas, como Facebook,
             Twitter, Instagram, LinkedIn e muitas outras, facilitando a
@@ -54,6 +54,10 @@ export default function HomeScreen() {
         <Text style={styles.defaultText}>
           Me chamo Douglas Eduardo e estou desenvolvendo um aplicativo que integra várias redes sociais.
         </Text>
+        <Image
+          source={require("@/assets/images/dgls.png")}
+          style={styles.aboutImage}
+        />
       </ThemedView>
     </ParallaxScrollView>
   );
@@ -74,25 +78,31 @@ const styles = StyleSheet.create({
   titleText: {
     fontSize: 28,
     color: "#FFFFFF",
-    fontFamily: "Monolite", // Aplicação da fonte Monolite
+    fontFamily: "Happy", // Aplicação da fonte Monolite
     textAlign: "center",
     marginBottom: 15,
   },
   subtitleText: {
     fontSize: 24,
     color: "#FFFFFF",
-    fontFamily: "Monolite", // Aplicação da fonte Monolite
+    fontFamily: "Happy", // Aplicação da fonte Monolite
     marginBottom: 10,
     textAlign: "center",
   },
   defaultText: {
     fontSize: 20,
     color: "#FFFFFF",
-    fontFamily: "Monolite", // Aplicação da fonte Monolite
+    fontFamily: "Happy", // Aplicação da fonte Monolite
     lineHeight: 24,
     textAlign: "center",
   },
   defaultSemiBold: {
     fontWeight: "600",
+  },
+  aboutImage: {
+    width: 100,
+    height: 100,
+    marginTop: 15,
+    alignSelf: "center",
   },
 });

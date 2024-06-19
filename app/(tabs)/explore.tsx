@@ -18,7 +18,7 @@ export default function TabTwoScreen() {
   useEffect(() => {
     async function loadFonts() {
       await Font.loadAsync({
-        Monolite: require("@/assets/fonts/Monolite.otf"),
+        Happy: require("@/assets/fonts/Happy.otf"),
       });
       setFontsLoaded(true);
     }
@@ -195,7 +195,7 @@ export default function TabTwoScreen() {
         </ThemedView>
         <ThemedView style={styles.redes}>
           <Image
-            source={require("@/assets/images/11.png")}
+            source={require("@/assets/images/12.png")}
             style={styles.icon}
           />
           <Pressable
@@ -223,7 +223,7 @@ const styles = StyleSheet.create({
   titleText: {
     fontSize: 28,
     color: "#FFFFFF",
-    fontFamily: "Monolite", // Aplicação da fonte Monolite
+    fontFamily: "Happy", // Aplicação da fonte Monolite
     textAlign: "center",
     marginBottom: 15,
     paddingVertical: 5,
@@ -252,7 +252,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: "#353636",
     textAlign: "center",
-    fontFamily: "Monolite",
+    fontFamily: "Happy",
   },
   loadingContainer: {
     flex: 1,
