@@ -12,7 +12,7 @@ export default function HomeScreen() {
   useEffect(() => {
     async function loadFonts() {
       await Font.loadAsync({
-        Monolite: require("@/assets/fonts/Monolite.otf"),
+        Happy: require("@/assets/fonts/Happy.otf"),
       });
       setFontsLoaded(true);
     }
@@ -67,6 +67,8 @@ const styles = StyleSheet.create({
   container: {
     paddingHorizontal: 20,
     paddingVertical: 15,
+    justifyContent:'center',
+    alignItems:'center',
   },
   reactLogo: {
     height: 300,
@@ -100,9 +102,11 @@ const styles = StyleSheet.create({
     fontWeight: "600",
   },
   aboutImage: {
-    width: 100,
-    height: 100,
-    marginTop: 15,
-    alignSelf: "center",
+    width: 200,
+    height: 200,
+    marginRight: 8,
+    borderRadius:100,
+    justifyContent:'center',
+    alignItems:'center',
   },
 });
