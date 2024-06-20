@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { Image, StyleSheet, View, Text } from 'react-native';
-import * as Font from 'expo-font';
+import React, { useState, useEffect } from "react";
+import { Image, StyleSheet, View, Text } from "react-native";
+import * as Font from "expo-font";
 import { HelloWave } from "@/components/HelloWave";
 import ParallaxScrollView from "@/components/ParallaxScrollView";
 import { ThemedText } from "@/components/ThemedText";
@@ -34,17 +34,16 @@ export default function HomeScreen() {
       }
     >
       <ThemedView style={styles.container}>
-        <Text style={styles.titleText}>Bem vindo ao UniChat!</Text>
-        <HelloWave />
+        <Text style={styles.titleText}>Bem-vindo ao UniChat! 🌸</Text>
       </ThemedView>
       <ThemedView style={styles.container}>
         <Text style={styles.subtitleText}>Sobre o app:</Text>
         <Text style={styles.defaultText}>
           <Text style={styles.defaultSemiBold}>
-            UniChat é a soluçâo definitiva para gerenciar todas as suas redes
-            sociais em um único lugar. Com UniChat, você pode conectar e
-            sincronizar suas contas de diversas plataformas, como Facebook,
-            Twitter, Instagram, LinkedIn e muitas outras, facilitando a
+            UniChat é a solução definitiva para gerenciar todas as suas redes
+            sociais em um único lugar. Com o UniChat, é possível conectar e
+            sincronizar suas contas de diversas plataformas, como WhatsApp,
+            Twitter, Instagram, LinkedIn, entre outras, facilitando a
             visualização e a interação com suas redes de forma centralizada.
           </Text>
         </Text>
@@ -52,7 +51,8 @@ export default function HomeScreen() {
       <ThemedView style={styles.container}>
         <Text style={styles.subtitleText}>Sobre mim:</Text>
         <Text style={styles.defaultText}>
-          Me chamo Douglas Eduardo e estou desenvolvendo um aplicativo que integra várias redes sociais.
+          Meu nome é Douglas Eduardo e estou desenvolvendo um aplicativo que
+          integra diversas redes sociais
         </Text>
         <Image
           source={require("@/assets/images/dgls.png")}
@@ -67,8 +67,8 @@ const styles = StyleSheet.create({
   container: {
     paddingHorizontal: 20,
     paddingVertical: 15,
-    justifyContent:'center',
-    alignItems:'center',
+    justifyContent: "center",
+    alignItems: "center",
   },
   reactLogo: {
     height: 300,
@@ -105,8 +105,8 @@ const styles = StyleSheet.create({
     width: 200,
     height: 200,
     marginRight: 8,
-    borderRadius:100,
-    justifyContent:'center',
-    alignItems:'center',
+    borderRadius: 100,
+    justifyContent: "center",
+    alignItems: "center",
   },
 });

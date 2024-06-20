@@ -123,7 +123,7 @@ export default function TabTwoScreen() {
             source={require("@/assets/images/4.png")}
             style={styles.icon}
           />
-          <Pressable onPress={() => Linking.openURL("tel:5518998106469")}>
+          <Pressable onPress={() => Linking.openURL("tel:+5518998106469")}>
             <ThemedText style={styles.text}>Telefone</ThemedText>
           </Pressable>
         </ThemedView>
@@ -233,15 +233,17 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
   },
   redes: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "center",
-    marginTop: 12,
-    backgroundColor: "#FFFFFF",
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: 20,
+    backgroundColor: 'white',
     borderRadius: 100,
-    paddingVertical: 14,
-    paddingHorizontal: 24,
-    marginBottom: 12,
+    paddingVertical: 12,
+    paddingHorizontal: 20,
+    borderWidth: 5,
+    borderColor: '#b558ef',
+    width: '90%',
   },
   icon: {
     width: 40,

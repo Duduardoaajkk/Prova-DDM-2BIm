@@ -28,7 +28,7 @@ export default function TabLayout() {
         options={{
           title: 'Redes Socias',
           tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'attach' : 'attach-outline'} color={color} />
+            <TabBarIcon name={focused ? 'chatbox-ellipses' : 'chatbox-ellipses-outline'} color={color} />
           ),
         }}
       />
